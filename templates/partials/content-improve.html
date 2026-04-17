@@ -1,0 +1,1855 @@
+{% load static %}
+{% block content %}
+					<div class="row">
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title font-size-18">AGV状态</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul id="tabs_1" class="nav nav-pills" role="tablist">
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link active text-center" href="#car_1"  data-bs-toggle="tab" role="tab"> AGV 001</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_2" data-bs-toggle="tab" role="tab"> AGV 002</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_3" data-bs-toggle="tab" role="tab"> AGV 003</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_4"  data-bs-toggle="tab" role="tab"> AGV 004</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_5" data-bs-toggle="tab" role="tab"> AGV 005</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_6" data-bs-toggle="tab" role="tab"> AGV 006</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                        <a class="nav-link text-center" href="#car_7" data-bs-toggle="tab" role="tab"> AGV 007</a>
+                                        </li>
+                                        <li class="nav-item col-sm-3">
+                                            <a class="nav-link text-center" href="#car_8" data-bs-toggle="tab" role="tab"> AGV 008</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="row g-0">
+                                        <div class="tab-content col-md-10 mt-5" style = "margin-left: 15px;margin-right: 15px">
+                                            <div class="tab-pane active" id="car_1">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">DGU1</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width: 85%">
+                                                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px">
+                                                            <div id="move_1" class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_2">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">DGU2</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:80%">
+                                                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px;width: 70%">
+                                                            <div class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px;width:89%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">89%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_3">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">GU1</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:97%">
+                                                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:79%">
+                                                            <div  class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 79%" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100">79%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:52%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100">52%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_4">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">GU2</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:75%">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:81%">
+                                                            <div class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 81%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100">81%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:37%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">37%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_5">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span class="text-info font-size-20">LGU1</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:79%">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 79%" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100">79%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:66%">
+                                                            <div class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:47%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 47%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_6">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">LGU2</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:91%">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 91%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">91%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:49%">
+                                                            <div class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">49%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:77%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="tab-pane" id="car_7">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span  class="text-info font-size-20">LGU3</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:82%">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>    
+                                                <div class="row mb-4">    
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:89%">
+                                                            <div id="move_7" class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">89%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:63%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">63%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_8">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="text-success font-size-20">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时线路</h5>
+                                                        <span class="text-info font-size-20">DGD1</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">电量</h5>
+                                                        <div class="progress" style="height: 20px; width:66%">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">载荷</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:86%">
+                                                            <div id="move_8" class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">86%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务完成率</h5>
+                                                        <div class="progress mt-3 mb-2" style="height: 20px; width:90%">
+                                                            <div class="progress-bar animated-progress bg-pink progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 mb-4">
+                                                    <div class="col-md-12">
+                                                        <img src="{% static 'images/agv-sm.png' %}" alt="agv-png" style = "width: 400px">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title font-size-18">订单进度</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="progress-bar-row" onclick="showOrderTime(1)">
+                                        <span class="order-number label label-primary">订单0001</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded progress-bar-striped progress-bar-animated" style="--progress-width: 98%;">98%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(2)">
+                                        <span class="order-number label label-primary">订单0002</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded progress-bar-striped progress-bar-animated" style="--progress-width: 83%;">83%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(3)">
+                                        <span class="order-number label label-primary">订单0003</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded bg-warning progress-bar-striped progress-bar-animated" style="--progress-width: 76%;">76%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(4)">
+                                        <span class="order-number label label-primary">订单0004</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded bg-warning progress-bar-striped progress-bar-animated" style="--progress-width: 67%;">67%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(5)">
+                                        <span class="order-number label label-primary">订单0005</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded bg-danger progress-bar-striped progress-bar-animated" style="--progress-width: 49%;">49%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(6)">
+                                        <span class="order-number label label-primary">订单0006</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded bg-danger progress-bar-striped progress-bar-animated" style="--progress-width: 41%;">41%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar-row" onclick="showOrderTime(7)">
+                                        <span class="order-number label label-primary">订单0007</span>
+                                        <div class="progress-bar rounded">
+                                            <div class="progress-fill rounded bg-danger progress-bar-striped progress-bar-animated" style="--progress-width: 28%;">28%</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <style>
+                                    .progress-container {
+                                        width: 100%;
+                                    }
+                                
+                                    .progress-bar-row {
+                                        display: flex; /* 使用flex布局 */
+                                        align-items: center; /* 确保所有子元素垂直居中对齐 */
+                                        margin-bottom: 23px; /* 设置进度条行之间的间隔 */
+                                    }
+                                    
+                                    .order-number {
+                                        margin-right: 10px; /* 设置订单编号和进度条之间的间距 */
+                                        /* 确保订单编号的行高与进度条的高度一致 */
+                                        line-height: 20px; /* 假设进度条的高度是20px */
+                                    }
+                                    
+                                    .progress-bar {
+                                        flex-grow: 1; /* 让进度条占满剩余空间 */
+                                        height: 20px; /* 进度条的高度 */
+                                        background-color: #565e64; /* 进度条的背景颜色 */
+                                        position: relative; /* 为内部的进度设置相对定位 */
+                                    }
+                                    
+                                    .progress-fill {
+                                        position: absolute; /* 绝对定位，用于填充进度 */
+                                        left: 0;
+                                        top: 0;
+                                        height: 100%; /* 进度条的高度 */
+                                        background-color: #4CAF50; /* 进度条颜色 */
+                                        width: var(--progress-width); /* 使用CSS变量来控制宽度 */
+                                        transition: width 0.5s; /* 进度条动画 */
+                                    }
+                                    .label {
+                                        display: inline-block;
+                                        padding: 0.25em 0.6em;
+                                        font-size: 90%;
+                                        font-weight: 700;
+                                        line-height: 1;
+                                        color: #f0f6ff;
+                                        text-align: center;
+                                        white-space: nowrap;
+                                        vertical-align: baseline;
+                                        border-radius: 0.25rem;
+                                        cursor: pointer; /* 添加指针样式，表示可点击 */
+                                    }
+                                    
+                                    /* 标签颜色 */
+                                    .label-primary {
+                                        background-color: #565e64;
+                                    }
+                                </style>
+                            <script>
+                            var orderDetails = {
+                                1: {time:'3天', requirement:'0.12w'},
+                                2: {time:'5天', requirement:'0.45w'},
+                                3: {time:'8天', requirement:'2.42w'},
+                                4: {time:'12天', requirement:'3.16w'},
+                                5: {time:'16天', requirement:'4.65w'},
+                                6: {time:'20天', requirement:'6.37w'},
+                                7: {time:'31天', requirement:'9.82w'},
+                            };
+                            function showOrderTime(orderId) {
+                                var details = orderDetails[orderId];
+                                document.getElementById('order-time').textContent = details.time; 
+                                document.getElementById('order-requirement').textContent = details.requirement; 
+                            }
+                            </script>
+                                <div class="card-body border-top text-center">
+                                    <div class="row">
+                                        <!--div class="col-sm-4">
+                                            <div class="d-inline-flex">
+                                                <h5 class="me-2"></h5>
+                                                <div class="text-success"> <i class="mdi mdi-car-pickup font-size-14"> </i>2 7</div>
+                                            </div>
+                                            <p class="text-muted text-truncate mb-0">当前等待车辆</p>
+                                        </div-->
+                                        <div class="col-sm-4">
+                                            <div class="mt-4 mt-sm-0">
+                                                <p class="mb-2 text-muted text-truncate"><i class="mdi mdi-circle text-muted font-size-10 me-1"></i> 未完成订单数：</p>
+                                                <div class="d-inline-flex">
+                                                    <div class="text-warning"> <i class="mdi mdi-list-status font-size-20"> </i></div>
+                                                    <div id="wait_num" class="text-warning font-size-20">7</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="mt-4 mt-sm-0">
+                                                <p class="mb-2 text-muted text-truncate"><i class="mdi mdi-circle text-primary font-size-10 me-1"></i> 订单剩余时间：</p>
+                                                <div class="d-inline-flex">
+                                                    <h5 id="order-time" class="mb-0 me-2" style="color: #0080ff"></h5>
+{#                                                    <div id="order-time" class="text-warning"> <i class="mdi mdi-car-pickup font-size-20"></i>7</div>#}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="mt-4 mt-sm-0">
+                                                <p class="mb-2 text-muted text-truncate"><i class="mdi mdi-circle text-success font-size-10 me-1"></i> 订单剩余需求：</p>
+                                                <div class="d-inline-flex">
+                                                    <h5 id="order-requirement" class="mb-0" style="color: #20b426"></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="card-title font-size-18">系统运行时间</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex-1 overflow-hidden">
+                                                            <p class="text-truncate font-size-14 mb-2"></p>
+                                                            <!--div class="mb-0 font-size-20" id="Main"></div-->
+
+                                                            <h4 class="mb-0" id="Main"></h4>
+                                                        </div>
+                                                        <div class="text-primary ms-auto"> <i class="ri-time-fill font-size-24"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="card-title font-size-18">室内温度</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex-1 overflow-hidden">
+                                                            <p class="text-truncate font-size-14 mb-2"></p>
+                                                            <h4 id="text_1" class="mb-0">23.2℃</h4>
+                                                        </div>
+                                                        <div class="text-primary ms-auto"> <i class="ri-temp-cold-line font-size-24"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="card-title font-size-18">室内湿度</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex-1 overflow-hidden">
+                                                            <p class="text-truncate font-size-14 mb-2"></p>
+                                                            <h4 id="text_2" class="mb-0">53.7%</h4>
+                                                        </div>
+                                                        <div class="text-primary ms-auto"> <i class="ri-water-flash-line font-size-24"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div>
+                                                <div>
+                                                    <video width="780" controls>
+                                                        <source src="{% static 'media/map.mp4' %}" type="video/mp4">
+                                                    </video>
+                                                    <!--h4 class="card-title mb-4">动态地图</h4-->
+{#                                                    <div id="heatmap" style="width:100%; height:555px;"></div>#}
+{#                                                    <script>#}
+{#                                                        var chart_3 = echarts.init(document.getElementById('heatmap'), 'white', {renderer: 'canvas'});#}
+{##}
+{#                                                        $(#}
+{#                                                            function () {#}
+{#                                                                fetchData_3(chart_3);#}
+{#                                                                setInterval(fetchData_3, 2000);#}
+{#                                                            }#}
+{#                                                        );#}
+{##}
+{#                                                        function fetchData_3() {#}
+{#                                                            $.ajax({#}
+{#                                                                type: "GET",#}
+{#                                                                url: "http://127.0.0.1:8000/pages/utility/map/",#}
+{#                                                                dataType: 'json',#}
+{#                                                                success: function (result) {#}
+{#                                                                    chart_3.setOption(result.data);#}
+{#                                                                }#}
+{#                                                            });#}
+{#                                                        }#}
+{#                                                    </script>#}
+                                                    <!--div id="data_img_7">
+                                                        <iframe src="starter-page/pie_wait" width="100%" height="420"></iframe>
+                                                    </div-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!-- end row -->
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                             <h5 class="card-title font-size-18">AGV运行信息</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="text-center mb-2">
+                                                        <span class="badge bg-dark font-size-24 text-center">7</span>
+                                                    </div>
+                                                    <h5 class="font-size-18 text-center">空闲中</h5>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="text-center mb-2">
+                                                        <span class="badge bg-success font-size-24 text-center">8</span>
+                                                    </div>
+                                                    <h5 class="font-size-18 text-center">工作中</h5>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="text-center mb-2">
+                                                        <span class="badge bg-danger font-size-24 text-center">2</span>
+                                                    </div>
+                                                    <h5 class="font-size-18 text-center">充电中</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="card-title font-size-18">待入库货物</h5>
+                                            <!--ul id="tabs_2" class="nav nav-tabs" role="tablist">
+                                              <li class="nav-item">
+                                                  <a class="nav-link active" href="#task_1"  data-bs-toggle="tab" role="tab">配置</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                  <a class="nav-link" href="#task_2" data-bs-toggle="tab" role="tab">操作</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                  <a class="nav-link" href="#task_3" data-bs-toggle="tab" role="tab">设置</a>
+                                              </li>
+                                            </ul-->
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="">
+                                                <div class="col-sm-4">
+                                                    <!--img src="{% static 'images/VNR-16-sm.png' %}" alt="agv-png"-->
+                                                </div>
+
+                                                <div class="tab-content col-sm-12" style="height: 400px">
+                                                    <div class="tab-pane active" id="task_1">
+                                                        <div class="table-responsive">
+                                                            <table class="table mb-0">
+
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>货品名称</th>
+                                                                        <th>货品数量</th>
+                                                                        <th>到达时间</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">包装盒</th>
+                                                                        <td>110,000</td>
+                                                                        <td>07：00：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">弹簧</th>
+                                                                        <td>126,000</td>
+                                                                        <td>07：00：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">次品</th>
+                                                                        <td>1,000</td>
+                                                                        <td>12：00：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">固定件</th>
+                                                                        <td>178,000</td>
+                                                                        <td>13：30：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">合格成品</th>
+                                                                        <td>231,000</td>
+                                                                        <td>14：50：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">笔杆</th>
+                                                                        <td>172,000</td>
+                                                                        <td>15：10：00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">笔芯</th>
+                                                                        <td>312,000</td>
+                                                                        <td>16：35：00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-4">等待时间占比</h4>
+                                            <div id="pie" style="width:100%; height:400px;"></div>
+                                            <script>
+                                                var chart_2 = echarts.init(document.getElementById('pie'), 'white', {renderer: 'canvas'});
+
+                                                $(
+                                                    function () {
+                                                        fetchData_2(chart_2);
+                                                        setInterval(fetchData_2, 2000);
+                                                    }
+                                                );
+
+                                                function fetchData_2() {
+                                                    $.ajax({
+                                                        type: "GET",
+                                                        url: "http://127.0.0.1:8000/pages/utility/pie/",
+                                                        dataType: 'json',
+                                                        success: function (result) {
+                                                            chart_2.setOption(result.data);
+                                                        }
+                                                    });
+                                                }
+                                            </script-->
+                                            <!--div id="data_img_7">
+                                                <iframe src="starter-page/pie_wait" width="100%" height="420"></iframe>
+                                            </div-->
+                                        <!--/div>
+                                    </div-->
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title font-size-18">实时库存数据</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_1" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">笔杆</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+{#                                                                <span class="text-primary font-size-18">001</span>#}
+                                                                <div class="progress" style="height: 20px; width:93%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">93%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_2" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">笔嘴</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:90%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_3" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">笔芯</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:98%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_4" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">弹簧</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:80%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_5" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">固定件</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:87%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">87%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_6" class="badge bg-dark font-size-14">001</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">包装盒</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-success font-size-18">已完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:36%">
+                                                                    <div class="progress-bar animated-progress bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 36%" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100">36%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-danger font-size-18">短缺</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_7" class="badge bg-dark font-size-14">002</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">合格成品</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-warning font-size-18">未完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:73%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100">73%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row mb-2">
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">仓库编号</h6>
+                                                                <span id="task_2_8" class="badge bg-dark font-size-14">003</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">货品名称</h6>
+                                                                <span class="text-info font-size-18">次品</span>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">本周盘点</h6>
+                                                                <span class="text-warning font-size-18">未完成</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-0">
+                                                            <div class="col-sm-8">
+                                                                <h6 class="mb-2">库存水平</h6>
+                                                                <div class="progress" style="height: 20px; width:20%">
+                                                                    <div class="progress-bar animated-progress bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <h6 class="mb-2">库存状态</h6>
+                                                                <span class="text-success font-size-18">正常</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+					</div>
+
+                    <!--div class="row">
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title font-size-24">叉车状态</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul id="tabs" class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#car_1"  data-bs-toggle="tab" role="tab">叉车 001</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_2" data-bs-toggle="tab" role="tab">叉车 002</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_3" data-bs-toggle="tab" role="tab">叉车 003</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_4"  data-bs-toggle="tab" role="tab">叉车 004</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_5" data-bs-toggle="tab" role="tab">叉车 005</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_6" data-bs-toggle="tab" role="tab">叉车 006</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="#car_7" data-bs-toggle="tab" role="tab">叉车 007</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#car_8" data-bs-toggle="tab" role="tab">叉车 008</a>
+                                        </li>
+                                    </ul>
+                                    <div class="row g-0">
+                                        <div class="col-sm-4">
+                                            <img src="{% static 'images/VNR-16-sm.png' %}" alt="agv-png">
+                                        </div>
+
+                                        <div class="tab-content col-sm-8 mt-5">
+                                            <div class="tab-pane active" id="car_1">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_1" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_1" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_1" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_2">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_2" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_2" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_2" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_3">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_3" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_3" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_3" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_4">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_4" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_4" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_4" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_5">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_5" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_5" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_5" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_6">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_6" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_6" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_6" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_7">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_7" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_7" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_7" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="car_8">
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">状态</h5>
+                                                        <span class="badge bg-success font-size-14">运行中</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">实时位置</h5>
+                                                        <span id="loc_8" class="badge bg-primary font-size-14"></span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">移动率</h5>
+                                                        <span class="badge bg-danger font-size-14">89.50%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务编号</h5>
+                                                        <span id="task_8" class="text-muted">100</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务类型</h5>
+                                                        <span class="text-muted">流水线任务</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">任务描述</h5>
+                                                        <span class="text-muted">取货中</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-4">
+                                                        <h5 class="mb-3">开始时间</h5>
+                                                        <span class="text-muted">12:30:00</span>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-8">电量</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:75px">
+                                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-4">
+                                                        <h5 class="mb-2">任务进度</h5>
+                                                        <div class="progress mb-4" style="height: 20px; width:80%">
+                                                            <div id="process_8" class="progress-bar animated-progess bg-info" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title font-size-24">待分配任务</h5>
+                                    <ul id="tabs_2" class="nav nav-tabs" role="tablist">
+                                      <li class="nav-item">
+                                          <a class="nav-link active" href="#task_1"  data-bs-toggle="tab" role="tab">配置</a>
+                                      </li>
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="#task_2" data-bs-toggle="tab" role="tab">操作</a>
+                                      </li>
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="#task_3" data-bs-toggle="tab" role="tab">设置</a>
+                                      </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="">
+                                        <div class="col-sm-4">
+                                            <img src="{% static 'images/VNR-16-sm.png' %}" alt="agv-png">
+                                        </div>
+
+                                        <div class="tab-content col-sm-12" style="height: 432px">
+                                            <div class="tab-pane active" id="task_1">
+                                                <div class="table-responsive">
+                                                    <table class="table mb-0">
+
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>任务编号</th>
+                                                                <th>任务类型</th>
+                                                                <th>到达时间</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>3</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>4</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>5</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">4</th>
+                                                                <td>6</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">5</th>
+                                                                <td>7</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">6</th>
+                                                                <td>8</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">7</th>
+                                                                <td>9</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">8</th>
+                                                                <td>10</td>
+                                                                <td>中转库任务</td>
+                                                                <td>14：00：00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <h1>配置页面</h1>
+                                                    <div class="progress mb-4">
+                                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="task_2">
+                                                <h1>操作页面</h1>
+                                            </div>
+                                            <div class="tab-pane" id="task_3">
+                                                <h1>设置页面</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+
+
+					<!-- end row -->
+
+
+{% endblock content %}
+
+{% block extra_javascript %}
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script>
+        var text_1 = document.getElementById('text_1');
+        var text_2 = document.getElementById('text_2');
+        var text_3 = document.getElementById('text_3');
+        var text_4 = document.getElementById('text_4');
+        var text_5 = document.getElementById('text_5');
+
+        $(
+            function () {
+                fetchText(text_1, text_2, text_3, text_4, text_5);
+                setInterval(fetchText, 2000);
+
+            }
+        );
+
+        function fetchText() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/text/",
+                dataType: 'json',
+                success: function (result) {
+                    text_1.innerText = result.data[0];
+                    text_2.innerText = result.data[1];
+                    text_3.innerText = result.data[2] + ' min';
+                    text_4.innerText = result.data[3] + ' min';
+                    text_5.innerHTML =  '<i class="mdi mdi-car-pickup font-size-16"></i> '+ result.data[4] ;
+                }
+            });
+        }
+    </script>
+    <script>
+        var wait_num = document.getElementById('wait_num');
+
+        $(
+            function () {
+                fetchWait(wait_num);
+                setInterval(fetchWait, 2000);
+
+            }
+        );
+
+        function fetchWait() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/waitnum/",
+                dataType: 'json',
+                success: function (result) {
+                    wait_num.innerText = result.data;
+                }
+            });
+        }
+    </script>
+    <script>
+        var loc_1 = document.getElementById('loc_1');
+        var loc_2 = document.getElementById('loc_2');
+        var loc_3 = document.getElementById('loc_3');
+        var loc_4 = document.getElementById('loc_4');
+        var loc_5 = document.getElementById('loc_5');
+        var loc_6 = document.getElementById('loc_6');
+        var loc_7 = document.getElementById('loc_7');
+        var loc_8 = document.getElementById('loc_8');
+
+        $(
+            function () {
+                fetchLoc(loc_1, loc_2, loc_3, loc_4, loc_5, loc_6, loc_7, loc_8);
+                setInterval(fetchLoc, 2000);
+
+            }
+        );
+
+        function fetchLoc() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/loc/",
+                dataType: 'json',
+                success: function (result) {
+                    loc_1.innerText = result.data[0];
+                    loc_2.innerText = result.data[1];
+                    loc_3.innerText = result.data[2];
+                    loc_4.innerText = result.data[3];
+                    loc_5.innerText = result.data[4];
+                    loc_6.innerText = result.data[5];
+                    loc_7.innerText = result.data[6];
+                    loc_8.innerText = result.data[7];
+                }
+            });
+        }
+    </script>
+    <script>
+        var task_1 = document.getElementById('task_1');
+        var task_2 = document.getElementById('task_2');
+        var task_3 = document.getElementById('task_3');
+        var task_4 = document.getElementById('task_4');
+        var task_5 = document.getElementById('task_5');
+        var task_6 = document.getElementById('task_6');
+        var task_7 = document.getElementById('task_7');
+        var task_8 = document.getElementById('task_8');
+        var task_2_1 = document.getElementById('task_2_1');
+        var task_2_2 = document.getElementById('task_2_2');
+        var task_2_3 = document.getElementById('task_2_3');
+        var task_2_4 = document.getElementById('task_2_4');
+        var task_2_5 = document.getElementById('task_2_5');
+        var task_2_6 = document.getElementById('task_2_6');
+        var task_2_7 = document.getElementById('task_2_7');
+        var task_2_8 = document.getElementById('task_2_8');
+
+        $(
+            function () {
+                fetchTask(task_1, task_2, task_3, task_4, task_5, task_6, task_7, task_8, task_2_1, task_2_2, task_2_3, task_2_4, task_2_5, task_2_6, task_2_7, task_2_8);
+                setInterval(fetchTask, 2000);
+
+            }
+        );
+
+        function fetchTask() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/task/",
+                dataType: 'json',
+                success: function (result) {
+                    task_1.innerText = result.data[0];
+                    task_2.innerText = result.data[1];
+                    task_3.innerText = result.data[2];
+                    task_4.innerText = result.data[3];
+                    task_5.innerText = result.data[4];
+                    task_6.innerText = result.data[5];
+                    task_7.innerText = result.data[6];
+                    task_8.innerText = result.data[7];
+                    task_2_1.innerText = result.data[0];
+                    task_2_2.innerText = result.data[1];
+                    task_2_3.innerText = result.data[2];
+                    task_2_4.innerText = result.data[3];
+                    task_2_5.innerText = result.data[4];
+                    task_2_6.innerText = result.data[5];
+                    task_2_7.innerText = result.data[6];
+                    task_2_8.innerText = result.data[7];
+                }
+            });
+        }
+    </script>
+    <script>
+        var process_1 = document.getElementById('process_1');
+        var process_2 = document.getElementById('process_2');
+        var process_3 = document.getElementById('process_3');
+        var process_4 = document.getElementById('process_4');
+        var process_5 = document.getElementById('process_5');
+        var process_6 = document.getElementById('process_6');
+        var process_7 = document.getElementById('process_7');
+        var process_8 = document.getElementById('process_8');
+        var process_2_1 = document.getElementById('process_2_1');
+        var process_2_2 = document.getElementById('process_2_2');
+        var process_2_3 = document.getElementById('process_2_3');
+        var process_2_4 = document.getElementById('process_2_4');
+        var process_2_5 = document.getElementById('process_2_5');
+        var process_2_6 = document.getElementById('process_2_6');
+        var process_2_7 = document.getElementById('process_2_7');
+        var process_2_8 = document.getElementById('process_2_8');
+
+        $(
+            function () {
+                fetchProcess(process_1, process_2, process_3, process_4, process_5, process_6, process_7, process_8, process_2_1, process_2_2, process_2_3, process_2_4, process_2_5, process_2_6, process_2_7, process_2_8);
+                setInterval(fetchProcess, 2000);
+
+            }
+        );
+
+        function fetchProcess() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/process/",
+                dataType: 'json',
+                success: function (result) {
+                    process_1.innerText = result.data[0]+'%';
+                    process_1.style.width = result.data[0]+'%';
+                    process_2.innerText = result.data[1]+'%';
+                    process_2.style.width = result.data[1]+'%';
+                    process_3.innerText = result.data[2]+'%';
+                    process_3.style.width = result.data[2]+'%';
+                    process_4.innerText = result.data[3]+'%';
+                    process_4.style.width = result.data[3]+'%';
+                    process_5.innerText = result.data[4]+'%';
+                    process_5.style.width = result.data[4]+'%';
+                    process_6.innerText = result.data[5]+'%';
+                    process_6.style.width = result.data[5]+'%';
+                    process_7.innerText = result.data[6]+'%';
+                    process_7.style.width = result.data[6]+'%';
+                    process_8.innerText = result.data[7]+'%';
+                    process_8.style.width = result.data[7]+'%';
+                    process_2_1.innerText = result.data[0]+'%';
+                    process_2_1.style.width = result.data[0]+'%';
+                    process_2_2.innerText = result.data[1]+'%';
+                    process_2_2.style.width = result.data[1]+'%';
+                    process_2_3.innerText = result.data[2]+'%';
+                    process_2_3.style.width = result.data[2]+'%';
+                    process_2_4.innerText = result.data[3]+'%';
+                    process_2_4.style.width = result.data[3]+'%';
+                    process_2_5.innerText = result.data[4]+'%';
+                    process_2_5.style.width = result.data[4]+'%';
+                    process_2_6.innerText = result.data[5]+'%';
+                    process_2_6.style.width = result.data[5]+'%';
+                    process_2_7.innerText = result.data[6]+'%';
+                    process_2_7.style.width = result.data[6]+'%';
+                    process_2_8.innerText = result.data[7]+'%';
+                    process_2_8.style.width = result.data[7]+'%';
+                }
+            });
+        }
+    </script>
+    <script>
+        var move_1 = document.getElementById('move_1');
+        var move_2 = document.getElementById('move_2');
+        var move_3 = document.getElementById('move_3');
+        var move_4 = document.getElementById('move_4');
+        var move_5 = document.getElementById('move_5');
+        var move_6 = document.getElementById('move_6');
+        var move_7 = document.getElementById('move_7');
+        var move_8 = document.getElementById('move_8');
+        $(
+            function () {
+                fetchMove(move_1, move_2, move_3, move_4, move_5, move_6, move_7, move_8);
+                setInterval(fetchMove, 2000);
+
+            }
+        );
+
+        function fetchMove() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:8000/pages/utility/move/",
+                dataType: 'json',
+                success: function (result) {
+                    move_1.innerText = result.data[0]+'%';
+                    move_1.style.width = result.data[0]+'%';
+                    move_2.innerText = result.data[1]+'%';
+                    move_2.style.width = result.data[1]+'%';
+                    move_3.innerText = result.data[2]+'%';
+                    move_3.style.width = result.data[2]+'%';
+                    move_4.innerText = result.data[3]+'%';
+                    move_4.style.width = result.data[3]+'%';
+                    move_5.innerText = result.data[4]+'%';
+                    move_5.style.width = result.data[4]+'%';
+                    move_6.innerText = result.data[5]+'%';
+                    move_6.style.width = result.data[5]+'%';
+                    move_7.innerText = result.data[6]+'%';
+                    move_7.style.width = result.data[6]+'%';
+                    move_8.innerText = result.data[7]+'%';
+                    move_8.style.width = result.data[7]+'%';
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            window.requestAnimationFrame(getDate)
+        }
+
+        function getDate()
+        {   window.setTimeout(function(){
+                window.requestAnimationFrame(getDate)
+            },1000/2)
+
+            var d=new Date();
+
+            var year=d.getFullYear()  //获取年
+
+            var month=d.getMonth()+1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+
+            var day=d.getDay()    //获取日
+
+            var days=d.getDate() //获取日期
+
+            var hour=d.getHours()   //获取小时
+
+            var minute=d.getMinutes()  //获取分钟
+
+            var second=d.getSeconds()   //获取秒
+
+            if(month<10) month="0"+month
+
+            if(days<10) days="0"+days
+
+            if(hour<10) hour="0"+hour
+
+            if(minute<10) minute="0"+minute
+
+            if(second<10) second="0"+second
+
+            var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
+
+            var Tools=document.getElementById("Main")
+
+            var da=hour+":"+minute+":"+second    //+week[day]year+"/"+month+"/"+days+" "+
+
+            Tools.innerHTML=da
+
+        }
+    </script>
+{% endblock extra_javascript %}

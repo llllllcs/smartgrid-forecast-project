@@ -1,0 +1,455 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block extra_css %}
+        <!-- DataTables -->
+        <link href="{% static 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/datatables.net-autoFill-bs4/css/autoFill.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/dropzone/min/dropzone.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{% static 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />   
+{% endblock extra_css %}
+
+{% block content %}                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">配置文件上传</h4>
+                                        <p class="card-title-desc">上传离线配置文件便于进行数据管理
+                                        </p>
+
+                                        <div>
+                                            <form action="http://127.0.0.1:8000/components/forms/upload_handle" method="post" enctype="multipart/form-data">
+                                                <div class="input-group">
+                                                    <input  id="customFile" class="form-control" name="file" type="file" multiple="multiple" accept=".text/csv">
+                                                </div>
+                                                <!--div class="dz-message needsclick"  class="dropzone">
+                                                    <div class="mb-3">
+                                                        <i class="display-4 text-muted ri-upload-cloud-2-line"></i>
+                                                    </div>
+
+                                                    <h4>将文件拖到此处或单击以上传</h4>
+                                                </div-->
+                                            </form>
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <input type="submit" class="btn btn-primary waves-effect waves-light" value="更新" onclick="display('lg')">
+                                            <!--button type="button" class="btn btn-primary waves-effect waves-light">Send Files</button-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+                        <div id="lg" class="row" style="display: none">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+        
+                                        <h4 class="card-title">库位信息</h4>
+        
+                                        <div class="table-responsive">
+                                            <table class="table table-editable table-nowrap align-middle table-edits text-white">
+                                                <thead>
+                                                    <tr>
+                                                        <th>编号</th>
+                                                        <th>x坐标</th>
+                                                        <th>y坐标</th>
+                                                        <th>节点类型</th>
+                                                        <th>库存配置状态</th>
+                                                        <th>编辑</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-id="1">
+                                                        <td data-field="id" style="width: 80px">1</td>
+                                                        <td data-field="x">0</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td style="width: 100px">
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="2">
+                                                        <td data-field="id">2</td>
+                                                        <td data-field="x">2</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="3">
+                                                        <td data-field="id">3</td>
+                                                        <td data-field="x">4</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="4">
+                                                        <td data-field="id">4</td>
+                                                        <td data-field="x">6</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="5">
+                                                        <td data-field="id">5</td>
+                                                        <td data-field="x">8</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="6">
+                                                        <td data-field="id">6</td>
+                                                        <td data-field="x">10</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="7">
+                                                        <td data-field="id">7</td>
+                                                        <td data-field="x">12</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="8">
+                                                        <td data-field="id">8</td>
+                                                        <td data-field="x">14</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="9">
+                                                        <td data-field="id">9</td>
+                                                        <td data-field="x">16</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="10">
+                                                        <td data-field="id">10</td>
+                                                        <td data-field="x">18</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="11">
+                                                        <td data-field="id" style="width: 80px">11</td>
+                                                        <td data-field="x">20</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td style="width: 100px">
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="12">
+                                                        <td data-field="id">12</td>
+                                                        <td data-field="x">22</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="13">
+                                                        <td data-field="id">13</td>
+                                                        <td data-field="x">24</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="14">
+                                                        <td data-field="id">14</td>
+                                                        <td data-field="x">26</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="15">
+                                                        <td data-field="id">15</td>
+                                                        <td data-field="x">28</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="16">
+                                                        <td data-field="id">16</td>
+                                                        <td data-field="x">30</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="17">
+                                                        <td data-field="id">17</td>
+                                                        <td data-field="x">32</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="18">
+                                                        <td data-field="id">18</td>
+                                                        <td data-field="x">34</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="19">
+                                                        <td data-field="id">19</td>
+                                                        <td data-field="x">36</td>
+                                                        <td data-field="y">0</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="20">
+                                                        <td data-field="id">20</td>
+                                                        <td data-field="x">10</td>
+                                                        <td data-field="y">2</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="21">
+                                                        <td data-field="id" style="width: 80px">21</td>
+                                                        <td data-field="x">36</td>
+                                                        <td data-field="y">2</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td style="width: 100px">
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="22">
+                                                        <td data-field="id">22</td>
+                                                        <td data-field="x">0</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="23">
+                                                        <td data-field="id">23</td>
+                                                        <td data-field="x">2</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="24">
+                                                        <td data-field="id">24</td>
+                                                        <td data-field="x">4</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="25">
+                                                        <td data-field="id">25</td>
+                                                        <td data-field="x">6</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="26">
+                                                        <td data-field="id">26</td>
+                                                        <td data-field="x">8</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="27">
+                                                        <td data-field="id">27</td>
+                                                        <td data-field="x">10</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="28">
+                                                        <td data-field="id">28</td>
+                                                        <td data-field="x">12</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="29">
+                                                        <td data-field="id">29</td>
+                                                        <td data-field="x">14</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-id="30">
+                                                        <td data-field="id">30</td>
+                                                        <td data-field="x">16</td>
+                                                        <td data-field="y">4</td>
+                                                        <td data-field="type">道路</td>
+                                                        <td data-field="state">无</td>
+                                                        <td>
+                                                            <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+{% endblock content %}	
+
+{% block extra_javascript %}
+        <!-- Table Editable plugin -->
+        <script src="{% static 'libs/table-edits/build/table-edits.min.js' %}"></script>
+
+        <script src="{% static 'js/pages/table-editable.init.js' %}"></script>
+        <script src="{% static 'libs/dropzone/min/dropzone.min.js' %}"></script>
+        <script type="text/javascript">
+
+            function display(id){
+                var traget=document.getElementById(id);
+                if(traget.style.display=="none"){
+                    traget.style.display="";
+                }else{
+                    traget.style.display="none";
+                }
+            }
+        </script>
+{% endblock extra_javascript %}

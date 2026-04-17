@@ -1,0 +1,83 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+        <!-- DataTables -->
+        <link href="{% static 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/datatables.net-autoFill-bs4/css/autoFill.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/dropzone/min/dropzone.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{% static 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css' %}" rel="stylesheet" type="text/css" />
+{% endblock extra_css %}
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title">配置文件上传</h4>
+                    <p class="card-title-desc">上传离线配置文件便于进行数据管理
+                    </p>
+
+                    <div>
+                        <form action="http://127.0.0.1:8000/components/forms/upload_handle" method="post" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <input  id="customFile" class="form-control" name="file" type="file" multiple="multiple" accept=".text/csv">
+                            </div>
+                            <!--div class="dz-message needsclick"  class="dropzone">
+                                <div class="mb-3">
+                                    <i class="display-4 text-muted ri-upload-cloud-2-line"></i>
+                                </div>
+
+                                <h4>将文件拖到此处或单击以上传</h4>
+                            </div-->
+                        </form>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <input type="submit" class="btn btn-primary waves-effect waves-light" value="提交" onclick="display('vedio')">
+                        <!--button type="button" class="btn btn-primary waves-effect waves-light">Send Files</button-->
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+    <div id="vedio" class="row"  style="display: none">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title font-size-18">仿真过程动画</h4>
+                    <p class="card-title-desc"></p>
+
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe title="YouToube Video" src="{% static 'media/simulation-AnyLogic.mp4' %}" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end col -->
+
+    </div> <!-- end row -->
+{% endblock content %}
+
+{% block extra_javascript %}
+        <!-- Table Editable plugin -->
+        <script src="{% static 'libs/table-edits/build/table-edits.min.js' %}"></script>
+
+        <script src="{% static 'js/pages/table-editable.init.js' %}"></script>
+        <script src="{% static 'libs/dropzone/min/dropzone.min.js' %}"></script>
+        <script type="text/javascript">
+
+            function display(id){
+                var traget=document.getElementById(id);
+                if(traget.style.display=="none"){
+                    traget.style.display="";
+                }else{
+                    traget.style.display="none";
+                }
+            }
+        </script>
+{% endblock extra_javascript %}
